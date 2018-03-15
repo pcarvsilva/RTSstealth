@@ -1,7 +1,6 @@
 ﻿using UnityEditor;
 using UnityEngine;
 using System.Collections;
-using UnityEditor;
 
 [CustomEditor(typeof(PatrolList))]
 public class PatrolListEditor : Editor
@@ -23,7 +22,7 @@ public class PatrolListEditor : Editor
         PatrolList patrol = (PatrolList)target;
         for (int i = 0; i < patrol.waypoints.Count; i++)
         {
-            Handles.Label(patrol.waypoints[i], (i+1).ToString()); ;
+            Handles.Label(patrol.waypoints[i], (i + 1).ToString(), GUI.skin.GetStyle("Button"));
         }
     }
 }

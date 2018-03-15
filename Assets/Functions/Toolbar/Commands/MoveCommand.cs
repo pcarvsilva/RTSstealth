@@ -10,6 +10,11 @@ public class MoveCommand : Command {
         BehaviourTreeAgent behaviourTreeAgent = agent.GetComponent<BehaviourTreeAgent>();
         behaviourTreeAgent.vector3Parameters["Move"] = hit.point;
         behaviourTreeAgent.boolParameters["Move"] = true;
+
+        behaviourTreeAgent.boolParameters["Interact"] = false;
+        behaviourTreeAgent.boolParameters["Attack"] = false;
+
+        behaviourTreeAgent.Refresh();
     }
 
 }

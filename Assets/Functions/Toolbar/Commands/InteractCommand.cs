@@ -10,5 +10,10 @@ public class InteractCommand : Command
         BehaviourTreeAgent behaviourTreeAgent = agent.GetComponent<BehaviourTreeAgent>();
         behaviourTreeAgent.boolParameters["Interact"] = true;
         behaviourTreeAgent.gameObjectParameters["Follow"] = hit.collider.gameObject;
+
+        behaviourTreeAgent.boolParameters["Move"] = false;
+        behaviourTreeAgent.boolParameters["Attack"] = false;
+
+        behaviourTreeAgent.Refresh();
     }
 }

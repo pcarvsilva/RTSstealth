@@ -21,6 +21,7 @@ public class CommandController : MonoBehaviour {
             if (commands != null && commands.Count != 0)
             {
                command = commands[0];
+                commands.RemoveAt(0);
             }
             else
             {
@@ -29,8 +30,10 @@ public class CommandController : MonoBehaviour {
             LayerMask layerMask = command.layerMask;
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100,layerMask))
             {
-                    if(hit.collider != null)
-                        command.OnClick(agent, hit);
+                if (hit.collider != null)
+                {
+                    command.OnClick(agent, hit);
+                }
             }
         }   
     }
