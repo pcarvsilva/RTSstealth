@@ -16,6 +16,8 @@ public class MoveLeafNode : LeafNode
     public override string Title { get { return "Move Node"; } }
     public override Vector2 DefaultSize { get { return new Vector2(150, 60); } }
 
+    public float reachTolerance = 0.8f;
+
     protected override IEnumerator process(BehaviourTreeAgent agent)
     {
         BehaviourTreeNodeState state = stateForAgent(agent);
@@ -23,17 +25,12 @@ public class MoveLeafNode : LeafNode
         Vector3 target = agent.vector3Parameters[moveTo];
 
         Vector3 previousTargetPosition = new Vector3(float.PositiveInfinity, float.PositiveInfinity);
-        while (Vector3.Distance(agent.transform.position,target) > navAgent.stoppingDistance)
+        while (Vector3.Distance(agent.transform.position,target) > reachTolerance)
         {
-            // did target move more than at least a minimum amount since last destination set?
-            if (Vector3.SqrMagnitude(previousTargetPosition - target) > 0.1f)
+            if (navAgent.SetDestination(target) == false)
             {
-                if (navAgent.SetDestination(target) == false)
-                {
-                    state.actualCondition = processCondition.Failure;
-                    yield break;
-                }
-                previousTargetPosition = target;
+               state.actualCondition = processCondition.Failure;
+               yield break;
             }
             yield return null;
         }

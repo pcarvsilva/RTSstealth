@@ -359,6 +359,7 @@ MonoBehaviour:
   indexInTree: 0
   inputKnob: {fileID: 114427827316901886}
   moveTo: Waypoint
+  reachTolerance: 0.8
 --- !u!114 &114400116023459072
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -854,6 +855,7 @@ MonoBehaviour:
   indexInTree: 0
   inputKnob: {fileID: 114072853365340288}
   objectToFollow: Enemy
+  reachTolerance: 0.8
 --- !u!114 &114696690426778494
 MonoBehaviour:
   m_ObjectHideFlags: 1

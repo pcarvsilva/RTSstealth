@@ -226,6 +226,7 @@ MonoBehaviour:
   indexInTree: 0
   inputKnob: {fileID: 114099980105549014}
   moveTo: Move
+  reachTolerance: 0.8
 --- !u!114 &114194893011792440
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -263,6 +264,7 @@ MonoBehaviour:
   indexInTree: 0
   inputKnob: {fileID: 114082466428325518}
   objectToFollow: Follow
+  reachTolerance: 0.8
 --- !u!114 &114218430035911052
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -753,6 +755,7 @@ MonoBehaviour:
   indexInTree: 0
   inputKnob: {fileID: 114194893011792440}
   objectToFollow: Follow
+  reachTolerance: 0.8
 --- !u!114 &114853703042026144
 MonoBehaviour:
   m_ObjectHideFlags: 1
