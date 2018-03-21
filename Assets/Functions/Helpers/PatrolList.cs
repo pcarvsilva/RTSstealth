@@ -16,4 +16,18 @@ public class PatrolList : MonoBehaviour {
         GetComponent<BehaviourTreeAgent>().listParameters[listToInsert] = points;
 	}
 
+    [Toolbar]
+    public void AddToList(RaycastHit hit)
+    {
+        waypoints.Add(hit.point);
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        for (int i = 0; i < waypoints.Count; i++)
+        {
+            Gizmos.DrawIcon(waypoints[i], (i + 1).ToString(),false);
+        }
+    }
+
 }

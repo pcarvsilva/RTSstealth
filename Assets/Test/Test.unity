@@ -724,7 +724,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 503142243}
-  m_LocalRotation: {x: 0.1665918, y: 0.43709084, z: -0.08274777, w: 0.8799725}
+  m_LocalRotation: {x: 0.16659188, y: 0.43709084, z: -0.08274782, w: 0.8799725}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1458,7 +1458,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 981976713}
-  m_LocalRotation: {x: 0.18250704, y: 0.435522, z: -0.09065354, w: 0.8768089}
+  m_LocalRotation: {x: 0.18250775, y: 0.4355219, z: -0.09065389, w: 0.8768087}
   m_LocalPosition: {x: -3.566525, y: 7.36, z: -2.7043018}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1589,10 +1589,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints:
-  - {x: -16.744839, y: 3, z: -6.823355}
-  - {x: 4.3192463, y: 3, z: -6.8168354}
-  - {x: 27.062716, y: 3, z: 8.91726}
-  - {x: 3.74013, y: 3.0000002, z: 25.714827}
+  - {x: -38.62419, y: 3, z: 8.945373}
+  - {x: -15.57204, y: 2.9999998, z: 24.807856}
+  - {x: 4.772408, y: 3, z: 26.343075}
+  - {x: 29.19511, y: 2.9999995, z: 8.961903}
+  - {x: 3.3942118, y: 3.0000002, z: -7.628296}
+  - {x: -15.324852, y: 2.9999998, z: -7.1722436}
   listToInsert: Patrol
 --- !u!65 &1124590254
 BoxCollider:
@@ -1795,7 +1797,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1254656745}
-  m_LocalRotation: {x: 0.18250753, y: 0.4355962, z: -0.09065317, w: 0.8767719}
+  m_LocalRotation: {x: 0.18252333, y: 0.43544883, z: -0.09062174, w: 0.87684506}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1988,6 +1990,17 @@ MonoBehaviour:
       serializedVersion: 2
       m_Bits: 4294967295
     commandType: MoveCommand
+  - priority: 0
+    subscribe: 0
+    unsubscribe: 1
+    unsubscribeOnClick: 0
+    cursorTexture: {fileID: 10900, guid: 0000000000000000f000000000000000, type: 0}
+    hotSpot: {x: 0, y: 0}
+    cursorMode: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    commandType: SelectionCommand
 --- !u!114 &1534629991
 MonoBehaviour:
   m_ObjectHideFlags: 0
