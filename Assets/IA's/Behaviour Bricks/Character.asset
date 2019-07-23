@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34a7c8ca992f915438a96c2077353778, type: 3}
+  m_Name: Character
+  m_EditorClassIdentifier: 
+  brickName: Assets/IA's/Behaviour Bricks/Character.asset
+  xml: "\uFEFF<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<BehaviorBricks xmlns:ref=\"urn:padaone\"
+    version=\"1.0\">\r\n  <BehaviorTree id=\"0\" />\r\n  <runtimeInfo>\r\n    <BehaviorTree
+    id=\"0\" guid=\"8816d8e560f94f646bff286236ee8729\" nextId=\"17\">\r\n      <root>\r\n
+    \       <RepeatDecorator id=\"1\" />\r\n      </root>\r\n      <inputParams>\r\n
+    \       <inputValues>\r\n          <entry name=\"target\" type=\"UnityEngine.GameObject\"
+    isBlackboard=\"False\" />\r\n          <entry name=\"ShouldMove\" type=\"System.Boolean\"
+    isBlackboard=\"False\" value=\"False\" />\r\n          <entry name=\"camera\"
+    type=\"UnityEngine.Camera\" isBlackboard=\"False\" />\r\n          <entry name=\"mask\"
+    type=\"UnityEngine.LayerMask\" isBlackboard=\"False\" />\r\n        </inputValues>\r\n
+    \     </inputParams>\r\n      <outputParams />\r\n      <localParams />\r\n    </BehaviorTree>\r\n
+    \   <RepeatDecorator id=\"1\" loops=\"-1\" policy=\"ContinueWhenChildFails\">\r\n
+    \     <child>\r\n        <SequenceNode id=\"9\" />\r\n      </child>\r\n      <inputParams
+    />\r\n      <outputParams />\r\n      <localParams />\r\n    </RepeatDecorator>\r\n
+    \   <SequenceNode id=\"9\">\r\n      <children>\r\n        <elem>\r\n          <ConditionNode
+    id=\"10\" />\r\n        </elem>\r\n        <elem>\r\n          <SubbehaviorNode
+    id=\"16\" />\r\n        </elem>\r\n      </children>\r\n      <inputParams />\r\n
+    \     <outputParams />\r\n      <localParams />\r\n    </SequenceNode>\r\n    <ConditionNode
+    id=\"10\">\r\n      <condition>\r\n        <ConditionEvalNode id=\"0\" />\r\n
+    \     </condition>\r\n      <inputParams>\r\n        <inputValues>\r\n          <entry
+    name=\"valueA\" type=\"System.Boolean\" isBlackboard=\"True\" blackboard=\"ShouldMove\"
+    />\r\n          <entry name=\"valueB\" type=\"System.Boolean\" isBlackboard=\"False\"
+    value=\"True\" />\r\n        </inputValues>\r\n      </inputParams>\r\n      <outputParams
+    />\r\n      <localParams />\r\n    </ConditionNode>\r\n    <SubbehaviorNode id=\"16\">\r\n
+    \     <_guid>6c77abc6244c7604a93f480b49b233c5</_guid>\r\n      <inputParams>\r\n
+    \       <inputValues>\r\n          <entry name=\"camera\" type=\"UnityEngine.Camera\"
+    isBlackboard=\"True\" blackboard=\"camera\" />\r\n          <entry name=\"mask\"
+    type=\"UnityEngine.LayerMask\" isBlackboard=\"True\" blackboard=\"mask\" />\r\n
+    \       </inputValues>\r\n      </inputParams>\r\n      <outputParams />\r\n      <localParams
+    />\r\n    </SubbehaviorNode>\r\n    <ConditionEvalNode id=\"0\" policy=\"ATOMIC_CHECK\"
+    name=\"Basic/CheckBool\">\r\n      <inputParams />\r\n      <outputParams />\r\n
+    \     <localParams />\r\n    </ConditionEvalNode>\r\n  </runtimeInfo>\r\n  <editorInfo>\r\n
+    \   <BehaviorTree id=\"0\" _name=\"Character\" _description=\"\" _removeIfClosed=\"False\">\r\n
+    \     <_rootList>\r\n        <elem>\r\n          <RepeatDecorator id=\"1\" />\r\n
+    \       </elem>\r\n        <elem>\r\n          <SequenceNode id=\"9\" />\r\n        </elem>\r\n
+    \       <elem>\r\n          <ConditionNode id=\"10\" />\r\n        </elem>\r\n
+    \       <elem>\r\n          <SubbehaviorNode id=\"16\" />\r\n        </elem>\r\n
+    \     </_rootList>\r\n      <_nodes>\r\n        <nodes>\r\n          <RepeatDecorator
+    id=\"1\" />\r\n          <SequenceNode id=\"9\" />\r\n          <ConditionNode
+    id=\"10\" />\r\n          <SubbehaviorNode id=\"16\" />\r\n        </nodes>\r\n
+    \     </_nodes>\r\n    </BehaviorTree>\r\n    <RepeatDecorator id=\"1\">\r\n      <_data>\r\n
+    \       <data breakpoint=\"0\" selected=\"False\" position=\"552 108\" name=\"Repeat\"
+    description=\"Repeats the execution of its child node\" cardinality=\"1\" hasParent=\"False\">\r\n
+    \         <BehaviorTree id=\"0\" />\r\n          <RepeatDecorator id=\"1\" />\r\n
+    \       </data>\r\n      </_data>\r\n    </RepeatDecorator>\r\n    <SequenceNode
+    id=\"9\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"458 386\" name=\"Sequence\" description=\"Executes all its children
+    in sequence until all of them are successful\" cardinality=\"-1\" hasParent=\"True\">\r\n
+    \         <BehaviorTree id=\"0\" />\r\n          <SequenceNode id=\"9\" />\r\n
+    \         <RepeatDecorator id=\"1\" />\r\n        </data>\r\n      </_data>\r\n
+    \   </SequenceNode>\r\n    <ConditionNode id=\"10\">\r\n      <_data>\r\n        <data
+    breakpoint=\"0\" selected=\"False\" position=\"210 560\" name=\"Basic/CheckBool\"
+    description=\"Checks whether two booleans have the same value\" cardinality=\"0\"
+    hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <ConditionNode
+    id=\"10\" />\r\n          <SequenceNode id=\"9\" />\r\n        </data>\r\n      </_data>\r\n
+    \   </ConditionNode>\r\n    <SubbehaviorNode id=\"16\">\r\n      <_data>\r\n        <data
+    breakpoint=\"0\" selected=\"False\" position=\"392 564\" name=\"QuickStartGuide/DoneClickAndGo\"
+    description=\"Moves the Game Object to the last position indicated by the left
+    mouse click.&#xA;Once a position has been selected, it cannot be changed until
+    the Game Object has reached it.\" cardinality=\"-1\" hasParent=\"True\">\r\n          <BehaviorTree
+    id=\"0\" />\r\n          <SubbehaviorNode id=\"16\" />\r\n          <SequenceNode
+    id=\"9\" />\r\n        </data>\r\n      </_data>\r\n    </SubbehaviorNode>\r\n
+    \   <ConditionEvalNode id=\"0\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
+    selected=\"False\" position=\"0 0\" name=\"AlwaysTrue\" description=\"Eval\" cardinality=\"1\"
+    hasParent=\"False\">\r\n          <BehaviorTree id=\"0\" />\r\n        </data>\r\n
+    \     </_data>\r\n    </ConditionEvalNode>\r\n  </editorInfo>\r\n</BehaviorBricks>"
+  zoom: 0.5
+  subslist:
+  - {fileID: 11400000, guid: 94f7b8d9d503df647aec1b5cdce03b4b, type: 2}
+  - {fileID: 11400000, guid: cefec543fe1d8774aa0b18d5ab374a84, type: 2}
+  - {fileID: 11400000, guid: 6c77abc6244c7604a93f480b49b233c5, type: 2}
+  _guid: 8816d8e560f94f646bff286236ee8729
