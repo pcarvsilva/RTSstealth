@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SelectionCommand : ICommand
+[CreateAssetMenu(menuName ="Command/Select")]
+public class SelectionCommand : Command
 {
-    public void OnClick(GameObject agent, RaycastHit hit)
+    public override void OnClick(GameObject agent, RaycastHit hit)
     {
         CommandController.instance.selectAgent(hit.collider.gameObject);
     }

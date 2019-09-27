@@ -1,6 +1,7 @@
 ﻿using Pada1.BBCore.Tasks;
 using Pada1.BBCore;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace BBUnity.Actions
 {
@@ -47,7 +48,9 @@ namespace BBUnity.Actions
                 camera = Camera.main;
             Ray ray = camera.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, 1000, mask))
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity) 
+                && LayerMaskExtension.CompareToLayer(hit.collider.gameObject.layer,LayerMask.GetMask("Ground"))
+                && EventSystem.current.currentSelectedGameObject == null)
             {
                 selectedPosition = hit.point;
                 selectedGameObject = hit.collider.gameObject;

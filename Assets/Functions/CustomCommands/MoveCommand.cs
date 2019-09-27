@@ -1,20 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using AITools;
+using UnityEngine.UI;
 
-public class MoveCommand : ICommand
+[CreateAssetMenu(menuName = "Command/Move")]
+public class MoveCommand : Command
 {
-    public void OnClick(GameObject agent, RaycastHit hit)
+
+    public void SetMoveTarget(GameObject agent,RaycastHit hit)
     {
-        BehaviourTreeAgent treeAgent = agent.GetComponent<BehaviourTreeAgent>();
-        treeAgent.boolParameters["Attack"] = false;
-        treeAgent.boolParameters["Move"] = true;
-        treeAgent.boolParameters["Interact"] = false;
-
-        treeAgent.vector3Parameters["Move"] = hit.point;
-
-        treeAgent.Refresh();
+        GameObject target = agent.GetComponent<NavMeshAnimationIntegration>().targetPosition;
+        target.transform.SetParent(null);
+        target.transform.position = hit.point;
     }
 
+    public override void OnClick(GameObject agent, RaycastHit hit)
+    {
+        SetMoveTarget(agent, hit);
+        agent.GetComponent<BehaviorExecutor>().SetBehaviorParam("Skill",0);
+        agent.GetComponentInChildren<ToggleGroup>().SetAllTogglesOff();
+    }
 }
