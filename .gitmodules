@@ -1,6 +1,3 @@
-[submodule "Assets/BehaviourTreeUnity"]
-	path = Assets/BehaviourTreeUnity
-	url = https://github.com/pcarvsilva/BehaviourTreeUnity
 [submodule "Assets/UnityToolbarWindow"]
 	path = Assets/UnityToolbarWindow
 	url = https://github.com/pcarvsilva/UnityToolbarWindow
@@ -10,3 +7,6 @@
 [submodule "Assets/penknifecode"]
 	path = Assets/penknifecode
 	url = https://gitlab.com/doubledashstudios/penknifecode.git
+[submodule "Assets/UniRx"]
+	path = Assets/UniRx
+	url = https://github.com/neuecc/UniRx.git
