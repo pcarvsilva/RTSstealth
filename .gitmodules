@@ -7,3 +7,6 @@
 [submodule "Assets/UniRx"]
 	path = Assets/UniRx
 	url = https://github.com/neuecc/UniRx.git
+[submodule "Assets/CommandPatternUnity"]
+	path = Assets/CommandPatternUnity
+	url = https://github.com/pcarvsilva/CommandPatternUnity
