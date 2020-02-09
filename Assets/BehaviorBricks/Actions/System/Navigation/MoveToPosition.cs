@@ -1,7 +1,6 @@
 ﻿using Pada1.BBCore.Tasks;
 using Pada1.BBCore;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace BBUnity.Actions
 {
@@ -45,13 +44,6 @@ namespace BBUnity.Actions
         {
             if (!navAgent.pathPending && navAgent.remainingDistance <= navAgent.stoppingDistance)
                 return TaskStatus.COMPLETED;
-
-            if (Input.GetMouseButtonDown(1))
-            {
-                navAgent.isStopped = true;
-                gameObject.GetComponentInChildren<ToggleGroup>().SetAllTogglesOff();
-                return TaskStatus.FAILED;
-            }
 
             return TaskStatus.RUNNING;
         }

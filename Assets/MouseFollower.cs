@@ -28,10 +28,10 @@ public class MouseFollower : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
         NavMeshHit navHit;
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity)
-            && LayerMaskExtension.CompareToLayer(hit.collider.gameObject.layer, LayerMask.GetMask("Ground"))
-            && NavMesh.SamplePosition(hit.point ,out navHit, 0.5f,NavMesh.AllAreas)
-            && EventSystem.current.IsPointerOverGameObject() == false)
+        if ( Physics.Raycast(ray, out hit, Mathf.Infinity)
+             && NavMesh.SamplePosition(hit.point ,out navHit, 0.5f,NavMesh.AllAreas)
+             && EventSystem.current.IsPointerOverGameObject() == false
+            )
         {
             transform.position = hit.point + offset;
             if (isRendering == false)

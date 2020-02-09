@@ -21,12 +21,16 @@ public class CameraTarget : MonoBehaviour
     }
 
 
-    private void OnDrawGizmos()
+    private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-
         Gizmos.DrawWireCube(bounds.center, bounds.size);
+    }
 
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.white;
+        Gizmos.DrawSphere(transform.position, 0.25f);
     }
 
     // Update is called once per frame

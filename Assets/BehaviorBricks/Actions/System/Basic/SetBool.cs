@@ -34,7 +34,6 @@ namespace BBUnity.Actions
         /// <remarks>Complete the task.</remarks>
         public override TaskStatus OnUpdate()
         {
-            var = value;
             return TaskStatus.COMPLETED;
         }
     }
