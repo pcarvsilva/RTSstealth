@@ -4,9 +4,6 @@
 [submodule "Assets/penknifecode"]
 	path = Assets/penknifecode
 	url = https://gitlab.com/doubledashstudios/penknifecode.git
-[submodule "Assets/UniRx"]
-	path = Assets/UniRx
-	url = https://github.com/neuecc/UniRx.git
 [submodule "Assets/CommandPatternUnity"]
 	path = Assets/CommandPatternUnity
 	url = https://github.com/pcarvsilva/CommandPatternUnity
