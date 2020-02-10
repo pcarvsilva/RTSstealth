@@ -9,5 +9,8 @@
 		https://github.com/pcarvsilva/BehaviourTreeUnity
 	Get Unity's Cinemachine at Asset Store and insert it folder
 
+# Basic Principles:
+	User input happens via Command Controller than that command runs calling behaviour bricks AI and setting UI propper calls.
+	The AI calls Mecanim, NavMesh and Interactables to interact with the real world  
 # Using:
-	Before running a level if it's not baked, bake it.
+	Before running a level if it's not baked, bake it.Run test scene
