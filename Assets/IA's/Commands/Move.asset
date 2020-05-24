@@ -21,4 +21,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  unsubscribeOnClick: 0
+  unsubscribeOnRightClick: 0
+  unsubscribeOnLeftClick: 0
+  isSubscribed: 0
+  behaviour: {fileID: 11400000, guid: 0e98889a339296e4db9d5c339996bb5e, type: 2}

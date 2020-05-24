@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30f0f4b502e090948820ceb4f242603a, type: 3}
+  m_Name: GetTrap
+  m_EditorClassIdentifier: 
+  subscribe: 0
+  unsubscribe: 1
+  priority: 2
+  cursorTexture: {fileID: 2800000, guid: 4632d710c9a1eab4893106cb75b263b9, type: 3}
+  hotSpot: {x: 0, y: 0}
+  cursorMode: 0
+  unsubscribeOnRightClick: 1
+  unsubscribeOnLeftClick: 0
+  isSubscribed: 0
+  behaviour: {fileID: 11400000, guid: 99c16aec5e9119044b769fe1ef79b5e2, type: 2}

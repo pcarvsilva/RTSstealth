@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92f873726f10273478d558645627c4de, type: 3}
+  m_Name: PlaceTrap
+  m_EditorClassIdentifier: 
+  subscribe: 0
+  unsubscribe: 0
+  priority: 2
+  cursorTexture: {fileID: 2800000, guid: 5fb48d19fd22e044996fc61ec0081642, type: 3}
+  hotSpot: {x: 0, y: 0}
+  cursorMode: 0
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  unsubscribeOnRightClick: 0
+  unsubscribeOnLeftClick: 1
+  isSubscribed: 0
+  behaviour: {fileID: 11400000, guid: 6e8891c90788b714f93e964b2e0b05cf, type: 2}
+  object_tag: Trap

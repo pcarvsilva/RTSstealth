@@ -18,3 +18,9 @@ MonoBehaviour:
   cursorTexture: {fileID: 2800000, guid: dc26844c00bed13449a5d8a549f28bcc, type: 3}
   hotSpot: {x: 0, y: 0}
   cursorMode: 0
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  unsubscribeOnRightClick: 0
+  unsubscribeOnLeftClick: 0
+  isSubscribed: 0

@@ -9,10 +9,12 @@ public class CameraTarget : MonoBehaviour
 
     private GameObject attached;
 
+    private static CameraTarget cameraTarget;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        cameraTarget = this;
     }
 
     public void AttachToGameObject(GameObject follow)
@@ -20,6 +22,10 @@ public class CameraTarget : MonoBehaviour
         attached = follow;
     }
 
+    public static void FindItselfAndAttachToGameObject(GameObject follow)
+    {
+        cameraTarget.AttachToGameObject(follow);
+    }
 
     private void OnDrawGizmosSelected()
     {
@@ -29,7 +35,7 @@ public class CameraTarget : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.white;
+        Gizmos.color = Color.red;
         Gizmos.DrawSphere(transform.position, 0.25f);
     }
 

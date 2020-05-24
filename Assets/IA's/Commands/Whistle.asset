@@ -18,7 +18,8 @@ MonoBehaviour:
   cursorTexture: {fileID: 0}
   hotSpot: {x: 0, y: 0}
   cursorMode: 0
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  unsubscribeOnClick: 0
+  unsubscribeOnRightClick: 1
+  unsubscribeOnLeftClick: 1
+  isSubscribed: 0
+  behaviour: {fileID: 11400000, guid: c64f5a4cd38d38a48867091af00d89f8, type: 2}
+  objectTag: Noise

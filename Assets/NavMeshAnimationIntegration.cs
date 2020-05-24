@@ -10,6 +10,7 @@ public class NavMeshAnimationIntegration : MonoBehaviour
 
     public GameObject targetPosition;
 
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();

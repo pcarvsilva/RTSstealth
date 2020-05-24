@@ -14,11 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subscribe: 0
   unsubscribe: 0
-  priority: 1
-  cursorTexture: {fileID: 0}
+  priority: 3
+  cursorTexture: {fileID: 2800000, guid: 3612cbdc0b07a3446b9312e13687739e, type: 3}
   hotSpot: {x: 0, y: 0}
   cursorMode: 0
   layerMask:
     serializedVersion: 2
     m_Bits: 0
-  unsubscribeOnClick: 0
+  unsubscribeOnRightClick: 0
+  unsubscribeOnLeftClick: 1
+  isSubscribed: 0
+  behaviour: {fileID: 11400000, guid: f7a694b1c3012dc4fa5b6de14ca8f420, type: 2}

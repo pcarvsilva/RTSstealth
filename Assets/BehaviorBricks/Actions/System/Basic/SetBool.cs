@@ -1,6 +1,7 @@
 ﻿using Pada1.BBCore.Framework;
 using Pada1.BBCore.Tasks;
 using Pada1.BBCore;
+using UnityEngine;
 
 namespace BBUnity.Actions
 {
@@ -34,6 +35,7 @@ namespace BBUnity.Actions
         /// <remarks>Complete the task.</remarks>
         public override TaskStatus OnUpdate()
         {
+            Debug.Log(var);
             return TaskStatus.COMPLETED;
         }
     }

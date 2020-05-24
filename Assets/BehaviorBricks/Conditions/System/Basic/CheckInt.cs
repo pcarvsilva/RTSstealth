@@ -21,23 +21,6 @@ namespace BBCore.Conditions
         [Help("Second value to be compared")]
         public int valueB;
 
-
-        public virtual TaskStatus MonitorFailWhenFalse()
-        {
-            if (Check())
-                return TaskStatus.RUNNING;
-            else
-                return TaskStatus.FAILED;
-        }
-
-        public virtual TaskStatus MonitorCompleteWhenTrue()
-        {
-            if (!Check())
-                return TaskStatus.RUNNING;
-            else
-                return TaskStatus.COMPLETED;
-        }
-
         public override bool Check()
         {
             return valueA == valueB;
